@@ -1,0 +1,14 @@
+// COLOR
+$color-primary:#9356DC;
+$color-deux:#FF79DA;
+$color-trois:#99E2D0;
+//COLOR ICON 
+$lightgrey:#7E7E7E;
+
+// INFO VARIABLE 
+$info-base-height:1rem;
+// COLOR FOOTER 
+$background-footer:#353535;
+
+// DEGRADER
+$gradiant-color: linear-gradien($color-primary,$color-deux, $color-trois);
