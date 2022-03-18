@@ -73,8 +73,9 @@
 
     &:hover {
       @include transform-zoom;
-      color: white;
+      color:$color-primary;
       cursor: pointer;
+      background-color: #9256dc25;
       .fas {
         margin-right: 0.3rem;
         color: $color-primary;
