@@ -1,0 +1,188 @@
+.section__introduction {
+  //background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  
+
+  &[data-background="1"] {
+    background-image: url(../../asset/menu-01.jpg);
+    @media (max-width:500px) {
+      background-size: contain;
+      height: 27rem;
+      
+    }
+    
+  }
+  &[data-background="2"] {
+    background-image: url(../../asset/menu-02.jpg);
+    @media (max-width:500px) {
+      background-size: contain;
+      height: 33rem;
+      
+    }
+  }
+  &[data-background="3"] {
+    background-image: url(../../asset/menu-03.jpg);
+    @media (max-width:500px) {
+      background-size: contain;
+      height: 27rem;
+      
+    }
+  }
+  &[data-background="4"] {
+    background-image: url(../../asset/menu-04.jpg);
+    @media (max-width:500px) {
+      background-size: contain;
+      height: 27rem;
+      
+    }
+  }
+}
+
+
+
+.section__menu {
+  background-color: #f6f6f6;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -10rem;
+  padding-bottom: 3rem;
+
+  @include button-degrade;
+
+  &-titre {
+    font-family: 'Shrikhand';
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    margin-bottom: -1rem;
+    
+    i {
+      bottom: 0.4em;
+      color: black;
+      cursor: pointer;
+      font-size: 35px;
+      right: 2em;
+      transition: all 1s ease-in-out;
+
+      &:hover {
+        background: linear-gradient($color-primary, $color-deux);
+        color: transparent;
+        font-weight: 600;
+        transform: scale(1.2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.section__contenair {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  
+  &-titre {
+    padding: 0 0 1em 1.8em;
+    font-weight: 400;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: -2rem;
+    margin-bottom: -1rem;
+    //margin-bottom: -1rem;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 2.5em;
+      left: 1.85em;
+      height: 3px;
+      background-color: $color-trois;
+    }
+  }
+  &-card {
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0;
+    width: 100%;
+    height: 5rem;
+    margin: auto;
+    overflow: hidden;
+    @include base-shadow;
+    @for $i from 2 through 5 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms *$i;
+        }
+        
+    }
+    animation-fill-mode: both;
+    animation: menu-animation 3s;
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 0.5rem;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: smaller;
+    }
+    &-titre {
+      padding: 0;
+      margin-bottom: -3px;
+      white-space: nowrap;
+    }
+    &-subtitre {
+      padding: 0;
+      font-weight: 100;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-price {
+      display: flex;
+      margin-left: auto;
+      padding: 1rem;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    &-check {
+      display: flex;
+      align-items: center;
+      background-color: $color-trois;
+      border-radius: 0 1rem 1rem 0;
+      height: 100%;
+      padding: 2rem;
+      margin-right: -6.5rem;
+      transition: margin-right 0.8s;
+      i {
+        display: flex;
+        place-items: center;
+        justify-content: space-around;
+        background: white;
+        aspect-ratio: 1;
+        width: 2rem;
+        border-radius: 1rem;
+        color: $color-trois;
+      }
+    }
+    &:hover {
+        cursor: pointer;
+        @include transform-zoom;
+      .section__contenair-card-check {
+        margin-right: 0;
+      }
+      & i {
+        animation: toupie-mode 1s ease-in-out;
+      }
+    }
+  }
+}
