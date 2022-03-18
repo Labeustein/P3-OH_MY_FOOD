@@ -1,0 +1,92 @@
+.menus {
+  background-color: #f6f6f6;
+  padding: 1rem;
+
+  &__titre {
+    padding: 1rem;
+  }
+  &__cards {
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .newz {
+      position: relative;
+    }
+    .newz::before {
+      content: "Nouveau";
+      position: absolute;
+      height: 2rem;
+      width: 5rem;
+      background-color: $color-trois;
+      color: darken($color: $color-trois, $amount: 50%);
+      display: grid;
+      place-items: center;
+      right: 1rem;
+      top: 1rem;
+    }
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 1rem 1rem 1rem 1rem;
+    @include base-shadow;
+    transition: transform 1000ms;
+
+    &:hover {
+      @include transform-zoom;
+    }
+
+    &__image {
+      height: 150px;
+      border-radius: 1rem 1rem 0 0;
+      background-size: cover;
+    }
+    @for $i from 1 through 4 {
+      &__image-#{$i} {
+        background-image: url("../../asset/menu-0#{$i}.jpg");
+      }
+    }
+    &__resto {
+      position: relative;
+      & h3,
+      p {
+        margin: 0.5rem;
+        padding-top: 0.5rem;
+      }
+     i {
+        position: absolute;
+        color: transparent;
+        cursor: pointer;
+        font-size: 2rem;
+        right: 2rem;
+        top: 0;
+        transform: translateY(50%);
+        right: 1em;
+        background: black;
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: all 1s cubic-bezier(0, 0, 1, 1);
+        -webkit-transition:  all 1s cubic-bezier(0, 0, 1, 1);
+        -webkit-text-fill-color: linear-gradient($color-primary, $color-deux);;
+        
+
+
+  
+        &:hover {
+          background: linear-gradient($color-primary, $color-deux);
+          color: transparent;
+          font-weight: 600;
+          
+          
+          
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+      }
+    }
+  }
+}

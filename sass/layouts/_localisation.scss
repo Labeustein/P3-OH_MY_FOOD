@@ -1,0 +1,89 @@
+.ville{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  text-align: center;
+  background-color: gainsboro;
+  padding: 0.3rem;
+  font-size: smaller;
+}
+
+/* ACCEUIL */
+.acceuil {
+  text-align: center;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  background-color: #f6f6f6;
+
+  & h2 {
+    font-size: x-large;
+    margin: 0;
+  }
+  & p {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  /* BUTTON */
+  @include button-degrade;
+}
+
+
+
+ .info {
+  counter-reset: steps;
+  padding: 1rem;
+  padding-bottom:2rem;
+  & .info__list {
+    display: flex;
+    gap: 1.3rem;
+    margin-left: -2rem;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  & li {
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+
+    &::before {
+      content: counter(steps);
+      counter-increment: steps;
+      color: white;
+      background-color: $color-primary;
+      width: 2 * $info-base-height;
+      height: 2 * $info-base-height;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -1 * $info-base-height;
+      transform: translateY(-50%);
+    }
+
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+    border-radius: 1rem;
+    @include base-shadow;
+
+    &:hover {
+      @include transform-zoom;
+      color: white;
+      cursor: pointer;
+      .fas {
+        margin-right: 0.3rem;
+        color: $color-primary;
+      }
+    }
+    & .fas {
+      margin-right: 0.3rem;
+      color: $lightgrey;
+    }
+  }
+}
+      
