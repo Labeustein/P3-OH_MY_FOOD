@@ -1,0 +1,18 @@
+footer{
+    background-color: $background-footer;
+    color: white;
+    padding: 0 2rem 2rem 2rem;
+    h2{ 
+    font-family: 'Shrikhand', cursive;
+    font-weight: 500;
+    padding: 1rem 0;
+    margin-top: 0;
+    margin-bottom: -4px;
+    }
+    a{
+        padding: 0.1rem;
+    }
+    i{
+        padding-right: 0.3rem;
+    }
+}
