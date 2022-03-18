@@ -1,0 +1,84 @@
+
+/* LOADER */
+.cs-loader {
+  position: fixed;
+  z-index: 2;
+  background-color: #ffffff;
+  opacity: 0.9;
+  align-items: center;
+  inset: 0;
+  animation: loader-animation 6s forwards;
+}
+.cs-loader-inner {
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  width: calc(100% - 0%);
+  color: black;
+  padding: 0 100px;
+  text-align: center;
+  label {
+    font-family: "Shrikhand";
+    font-size: 50px;
+    opacity: 0;
+    display: inline-block;
+    &:nth-child(11) {
+      -webkit-animation: lol 3s infinite ease-in-out;
+      animation: lol 3s infinite ease-in-out;
+    }
+    &:nth-child(10) {
+      color: $color-trois;
+      -webkit-animation: lol 3s infinite ease-in-out;
+      animation: lol 3s 200ms infinite ease-in-out;
+    }
+    &:nth-child(9) {
+      color: $color-trois;
+      -webkit-animation: lol 3s infinite ease-in-out;
+      animation: lol 3s 300ms infinite ease-in-out;
+    }
+    &:nth-child(8) {
+      color: $color-trois;
+      -webkit-animation: lol 3s infinite ease-in-out;
+      animation: lol 3s 400ms infinite ease-in-out;
+    }
+    &:nth-child(7) {
+      color: $color-trois;
+      -webkit-animation: lol 3s infinite ease-in-out;
+      animation: lol 3s 500ms infinite ease-in-out;
+    }
+    &:nth-child(6) {
+      -webkit-animation: lol 3s infinite ease-in-out;
+      animation: lol 3s 600ms infinite ease-in-out;
+    }
+    &:nth-child(5) {
+      color: $color-deux;
+      -webkit-animation: lol 3s 100ms infinite ease-in-out;
+      animation: lol 3s 700ms infinite ease-in-out;
+    }
+    &:nth-child(4) {
+      color: $color-deux;
+      -webkit-animation: lol 3s 200ms infinite ease-in-out;
+      animation: lol 3s 800ms infinite ease-in-out;
+    }
+    &:nth-child(3) {
+      -webkit-animation: lol 3s 300ms infinite ease-in-out;
+      animation: lol 3s 900ms infinite ease-in-out;
+    }
+    &:nth-child(2) {
+      color: $color-primary;
+      -webkit-animation: lol 3s 400ms infinite ease-in-out;
+      animation: lol 3s 1000ms infinite ease-in-out;
+    }
+    &:nth-child(1) {
+      color: $color-primary;
+      -webkit-animation: lol 3s 500ms infinite ease-in-out;
+      animation: lol 3s 1100ms infinite ease-in-out;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  label {
+    font-size: 35px;
+  }
+}
