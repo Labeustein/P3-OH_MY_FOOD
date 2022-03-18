@@ -437,8 +437,9 @@ header {
 .info li:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  color: white;
+  color: #9356DC;
   cursor: pointer;
+  background-color: #9256dc25;
 }
 
 .info li:hover .fas {
